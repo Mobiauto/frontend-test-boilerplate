@@ -1,0 +1,9 @@
+.search {
+	&__buttons {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button { margin: 0 1rem }
+	&__result { overflow: auto }
+}

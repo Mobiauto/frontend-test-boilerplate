@@ -1,23 +1,14 @@
 # Teste para Desenvolvedor Frontend
 
-- Crie uma pasta com a seu nome
+- Branch `gfpaiva`
 
-- Clone o repositorio https://github.com/Mobiauto/frontend-test-boilerplate
+- Instalação: `npm install`
 
-- Siga as instruções abaixo para rodar o boilerplate 
+- Para rodar local: `npm start`
 
-- O teste consiste em consultar esta API (http://deividfortuna.github.io/fipe/) e trazer os resultados na tela da melhor forma possível.
+- []()
 
-- A ideia é ir filtrando as informações da API em 4 passos ou telas distintas: Marcas, Modelos, Anos e Valor.
-
-- Use algum gerenciador de estado (MobX ou Redux), preferencialmente MobX.
-
-Boa sorte! 
-
-
-
-
-
+- Feito por [Guilherme Paiva](https://guilherme.dev/)
 
 
 ## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

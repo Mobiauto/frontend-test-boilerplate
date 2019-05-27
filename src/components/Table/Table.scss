@@ -1,0 +1,25 @@
+@import '../../scss/root';
+
+.search {
+	&__table {
+		@include responsive-font-size(12px);
+		border-collapse: collapse;
+		margin: 2rem auto;
+		text-align: center;
+
+		th {
+			background-color: $contrast-color;
+			color: $secondary-color;
+			padding: .5em 1em;
+		}
+
+		td {
+			background-color: darken($primary-color, 20%);
+			padding: 1em;
+		}
+
+		table, th, td {
+			border: 1px solid $primary-color;
+		}
+	}
+}

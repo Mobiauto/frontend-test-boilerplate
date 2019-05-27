@@ -1,0 +1,126 @@
+@import './scss/fonts',
+		'./scss/root',
+		'~normalize.css/normalize.css';
+
+
+html,
+body {
+	background-color: $primary-color;
+	color: $text-color;
+	font: normal normal 1em/1.5 $fontFamily;
+}
+
+*,
+:after,
+:before { box-sizing: border-box }
+
+::selection {
+	background: #000;
+	color: #fff;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.container {
+	max-width: $container;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.my {
+	&-0 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&-1 {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	&-2 {
+		margin-top: 1.25rem;
+		margin-bottom: 1.25rem;
+	}
+
+	&-3 {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	&-4 {
+		margin-top: 1.75rem;
+		margin-bottom: 1.75rem;
+	}
+}
+
+.d {
+	&-none { display: none }
+	&-block { display: block }
+	&-inline { display: inline }
+	&-inline-block { display: inline-block }
+}
+
+.page {
+	&--full {
+		height: 100vh;
+		width: 100%;
+	}
+
+	&--centered {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+img.full-width {
+	height: auto;
+	max-width: 100%;
+}
+
+fieldset {
+	border: 1px solid rgba(255, 255, 255, .2);
+	border-radius: 10px;
+	opacity: 1;
+	transition: opacity .25s linear;
+
+	&:disabled { opacity: .5!important }
+	legend { padding: 0 .75em }
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fromUp {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animated-enter {
+	&--fade-in { animation: fadeIn .5s linear }
+	&--from-up { animation: fromUp .5s linear }
+}
+
+.card {
+	background-color: rgba(255, 255, 255, .75);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+	margin: .5em;
+	padding: .5em 1em;
+}

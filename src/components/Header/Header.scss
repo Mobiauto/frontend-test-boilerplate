@@ -1,0 +1,21 @@
+@import '../../scss/root';
+
+.header {
+
+	background-color: $contrast-color;
+	color: $secondary-color;
+	padding: 1rem 0;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		height: auto;
+		margin-right: .5rem;
+		max-width: 25px;
+		vertical-align: bottom;
+	}
+}
