@@ -6,7 +6,7 @@ import HomeComponent from "./HomeComponent";
 
 const Container = connect(
   HomeContainer,
-  ["userStore", "uiStore"]
+  ["brandStore", "modelStore", "yearStore", "resultStore"]
 );
 
 function HomeMain(props) {

@@ -1,16 +1,34 @@
 import * as React from "react";
+import BrandList from "./BrandList";
+import ModelList from "./ModelList";
+import YearList from "./YearList";
+import Results from "./Results";
+import { Global, MainContainer } from "./GenericComponents";
 
 class HomeComponent extends React.Component {
   render() {
-    const { welcome } = this.props;
-    console.log("welcome", welcome);
-
+    
     return (
       <React.Fragment>
-        <h2>{welcome}</h2>
+        <Global/>
+        <MainContainer>
+            <form>
+              <div>
+                <BrandList {...this.props}/>
+                <ModelList {...this.props}/>
+                <YearList {...this.props}/>
+              </div>
+              <Results {...this.props}/>
+            </form>
+        </MainContainer>
       </React.Fragment>
     );
   }
 }
+
+
+
+
+
 
 export default HomeComponent;
