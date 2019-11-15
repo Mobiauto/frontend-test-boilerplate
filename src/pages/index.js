@@ -1,3 +1,6 @@
-import Home from "./home";
+import Home from './home';
+import Initial from './initial';
+import Filters from './filters';
+import Detail from './detail';
 
-export { Home };
+export { Home, Initial, Filters, Detail };
