@@ -13,8 +13,6 @@ import {
     GET_VALUES_FAIL
 } from './action-types';
 
-const url = 'https://parallelum.com.br/fipe/api/v1/carros/'
-
 export const getCars = () => dispatch => {
     dispatch({
         type: GET_BRANDS,
@@ -22,7 +20,7 @@ export const getCars = () => dispatch => {
             client: '',
             request: {
                 method: 'GET',
-                url: url+'marcas',
+                url: 'marcas',
             },
             options: {
                 onSuccess: ({ response }) => {
@@ -52,7 +50,7 @@ export const getModels = (brand) => dispatch => {
             client: '',
             request: {
                 method: 'GET',
-                url: url+ "/marcas/" + brand + '/modelos',
+                url: "/marcas/" + brand + '/modelos',
             },
             options: {
                 onSuccess: ({ response }) => {
@@ -82,7 +80,7 @@ export const getYears = (brand, model) => dispatch => {
             client: '',
             request: {
                 method: 'GET',
-                url:  url+ "/marcas/" + brand + '/modelos/' + model + '/years' ,
+                url:  "/marcas/" + brand + '/modelos/' + model + '/anos' ,
             },
             options: {
                 onSuccess: ({ response }) => {
@@ -112,7 +110,7 @@ export const getValue = (brand, model, codigo) => dispatch => {
             client: '',
             request: {
                 method: 'GET',
-                url:  url+ "/marcas/" + brand + '/modelos/' + model + '/years' + codigo,
+                url:  "/marcas/" + brand + '/modelos/' + model + '/anos/' + codigo,
             },
             options: {
                 onSuccess: ({ response }) => {

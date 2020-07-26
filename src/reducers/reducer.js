@@ -13,25 +13,24 @@ const apiReducer = (state = initialState, action) => {
             return {
                 ...state,
                 ...action.payload.data,
-                'type': 'marca'
+                ['type']: 'marca'
             }
         case GET_MODELS_SUCCESS:
             return {
-                ...state,
-                ...action.payload.data,
-                'type': 'modelo'
+                ...action.payload.data["modelos"],
+                ['type']: 'modelo'
             }
         case GET_YEARS_SUCCESS:
             return {
                 ...state,
                 ...action.payload.data,
-                'type': 'ano'
+                ['type']: 'ano'
             }
         case GET_VALUES_SUCCESS:
             return {
                 ...state,
                 ...action.payload.data,
-                'type': 'valor'
+                ['type']: 'valor'
             }
     }
 }
