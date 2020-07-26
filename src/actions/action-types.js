@@ -1,0 +1,12 @@
+export const GET_BRANDS = "GET_BRANDS";
+export const GET_BRANDS_SUCCESS = "GET_BRANDS_SUCCESS";
+export const GET_BRANDS_FAIL = "GET_BRANDS_FAIL";
+export const GET_MODELS = "GET_MODELS";
+export const GET_MODELS_SUCCESS = "GET_MODELS_SUCCESS";
+export const GET_MODELS_FAIL = "GET_MODELS_FAIL";
+export const GET_YEARS = "GET_YEARS";
+export const GET_YEARS_SUCCESS = "GET_YEARS_SUCCESS";
+export const GET_YEARS_FAIL = "GET_YEARS_FAIL";
+export const GET_VALUES = "GET_VALUES";
+export const GET_VALUES_SUCCESS = "GET_VALUES_SUCCESS";
+export const GET_VALUES_FAIL = "GET_VALUES_FAIL";

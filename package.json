@@ -3,12 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material/react-list": "^0.15.0",
+    "@material/react-menu": "^0.15.0",
+    "@material/react-menu-surface": "^0.15.0",
+    "axios": "^0.19.2",
     "mobx": "4.8.0",
     "mobx-react": "^5.4.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.2.1",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.5",
+    "redux-axios-middleware": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "start": "react-scripts start",
