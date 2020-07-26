@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import {getCars, getModels, getValue, getYears} from "../actions/actions";
-import MenuComponent from "../components/MenuComponent";
-import { connect } from "react-redux";
+import Card from "../components/Card";
+import Header from "../components/Header";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -10,9 +10,9 @@ const App = () => {
   useEffect(() => {
         dispatch(getCars())
   }, []);
-
+  
   const cars = useSelector((state) => state)
-
+  
   const [selected, setSelected] =  useState({});
   
   const getModelById = (type, id) => {
@@ -30,28 +30,18 @@ const App = () => {
    
     return (
       <>
-        <MenuComponent onClick={(item) => console.log(item)} ></MenuComponent>
-        <h2> {cars && cars["type"]}</h2>
-        <span>Clique em um elemento para filtrar</span>
-        <ul>
+        <Header type={cars && cars["type"]} onClick={() => dispatch(getCars())}/>
         { cars === undefined ? [] :
-          cars["type"] !== "valor" && Object.keys(cars).map((item, i) => (
-              <li onClick={() => getModelById(cars["type"], cars[item].codigo)} key={i}>name: {cars[item].nome} codigo: {cars[item].codigo}</li>
+          cars["type"] !== "valor" && cars && Object.keys(cars["cars"]).map((item, i) => (
+              <Card isValue onClick={() => getModelById(cars["type"], cars["cars"][i].codigo)} brand={cars["cars"][i].nome} code={cars["cars"][i].codigo} key={i} />
           ))
         }
-        </ul>
-        <ul>
         { cars === undefined ? [] :
           cars["type"] === "valor" && 
-              <li>name: {cars.AnoModelo} CodigoFipe: {cars.CodigoFipe} Valor: {cars.Valor}</li>
+            <Card year={cars["cars"].AnoModelo} code={cars["cars"].CodigoFipe} value={cars["cars"].Valor} brand={cars["cars"].Marca} model={cars["cars"].Modelo}/>
         }  
-        </ul>
       </>
     );
 }
 
-const mapStateToProps = ( components ) => ({
-  pathname: '/',
-});
-
-export default connect(mapStateToProps)(App);
+export default App;
