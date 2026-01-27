@@ -1,3 +1,5 @@
+![Badge confidential](http://img.shields.io/static/v1?label=SECURITY&message=PUBLICO&color=green&style=for-the-badge)
+
 # Teste para Desenvolvedor Frontend
 
 - Crie uma pasta com a seu nome
